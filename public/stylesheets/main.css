@@ -3,9 +3,32 @@
  */
 
 body {
-  padding-top: 70px; /* Move body of page below the Bootstrap navbar. */
+  padding-top: 130px; /* Move body of page below the Bootstrap navbar. */
 }
 
-.navbar-nav > li.active {
-  background-image: linear-gradient(rgb(49, 53, 57), rgb(58, 63, 68) 60%, rgb(72, 78, 85));
+
+img.Logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+}
+
+.navbar {
+  background-color: black;
+  color: grey;
+}
+
+.nav>li>a {
+  color: gray;
+}
+
+a.navbar-brand {
+  color: gray;
+}
+
+h1 {
+  color: black;
 }

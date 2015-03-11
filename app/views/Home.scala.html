@@ -1,10 +1,46 @@
-@(message: String)
-
 @Main("Home") {
 
-  @MainNavbar("Home")
+  @MainNavbar()
+
   <div class="container">
-    <p>The home page.</p>
-    <p>Status:  @message</p>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <a id="intro"></a><h1>Introduction</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum sem elit, et hendrerit turpis fringilla ac. Sed aliquet purus gravida elit malesuada tempor. Maecenas maximus tellus non turpis commodo suscipit. Nullam nec condimentum dolor. Mauris gravida, nibh vel molestie efficitur, ipsum risus gravida eros, quis congue leo lectus vitae risus. Nunc at laoreet orci. Aliquam erat volutpat. Vivamus viverra tempor quam nec aliquet. Sed finibus augue mauris, at ornare sapien consequat ut. Sed volutpat fringilla nisi id elementum.
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="well">
+          <a id="ie"></a><h1>Internet Explorer</h1>
+          <img alt="Logo" src="@routes.Assets.at("images/Internet_Explorer_7_Logo.png")" class="Logo">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum sem elit, et hendrerit turpis fringilla ac. Sed aliquet purus gravida elit malesuada tempor. Maecenas maximus tellus non turpis commodo suscipit. Nullam nec condimentum dolor. Mauris gravida, nibh vel molestie efficitur, ipsum risus gravida eros, quis congue leo lectus vitae risus. Nunc at laoreet orci. Aliquam erat volutpat. Vivamus viverra tempor quam nec aliquet. Sed finibus augue mauris, at ornare sapien consequat ut. Sed volutpat fringilla nisi id elementum.
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="well">
+          <a id="firefox"></a><h1>Firefox</h1>
+          <img alt="Logo" src="@routes.Assets.at("images/Mozilla_firefox_logo_2013.png")" class="Logo">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum sem elit, et hendrerit turpis fringilla ac. Sed aliquet purus gravida elit malesuada tempor. Maecenas maximus tellus non turpis commodo suscipit. Nullam nec condimentum dolor. Mauris gravida, nibh vel molestie efficitur, ipsum risus gravida eros, quis congue leo lectus vitae risus. Nunc at laoreet orci. Aliquam erat volutpat. Vivamus viverra tempor quam nec aliquet. Sed finibus augue mauris, at ornare sapien consequat ut. Sed volutpat fringilla nisi id elementum.
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="well">
+          <a id="chrome"></a><h1>Chrome</h1>
+          <img alt="Logo" src="@routes.Assets.at("images/Google_Chrome_icon_(2011).svg")" class="Logo">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum sem elit, et hendrerit turpis fringilla ac. Sed aliquet purus gravida elit malesuada tempor. Maecenas maximus tellus non turpis commodo suscipit. Nullam nec condimentum dolor. Mauris gravida, nibh vel molestie efficitur, ipsum risus gravida eros, quis congue leo lectus vitae risus. Nunc at laoreet orci. Aliquam erat volutpat. Vivamus viverra tempor quam nec aliquet. Sed finibus augue mauris, at ornare sapien consequat ut. Sed volutpat fringilla nisi id elementum.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
 }

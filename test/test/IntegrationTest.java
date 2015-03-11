@@ -40,67 +40,12 @@ public class IntegrationTest {
     running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
       public void invoke(TestBrowser browser) {
         browser.goTo("http://localhost:3333");
-        assertThat(browser.pageSource()).contains("The home page.");
+        assertThat(browser.pageSource()).contains("A history of browsers");
 
         browser.goTo("http://localhost:3333/");
-        assertThat(browser.pageSource()).contains("The home page.");
+        assertThat(browser.pageSource()).contains("A history of browsers");
       }
     });
   }
 
-
-  /**
-   * Check if the Page 1 is shown.
-   */
-  @Test
-  public void testPage1() {
-    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
-      public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:3333/page1");
-        assertThat(browser.pageSource()).contains("The first page.");
-      }
-    });
-  }
-
-
-  /**
-   * Check if the Page 2 is shown.
-   */
-  @Test
-  public void testPage2() {
-    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
-      public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:3333/page2");
-        assertThat(browser.pageSource()).contains("The second page.");
-      }
-    });
-  }
-
-
-  /**
-   * Check if the About page is shown.
-   */
-  @Test
-  public void testAbout() {
-    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
-      public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:3333/about");
-        assertThat(browser.pageSource()).contains("About this application...");
-      }
-    });
-  }
-
-
-  /**
-   * Check if the Contact page is shown.
-   */
-  @Test
-  public void testContact() {
-    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
-      public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:3333/contact");
-        assertThat(browser.pageSource()).contains("Please contact");
-      }
-    });
-  }
 }

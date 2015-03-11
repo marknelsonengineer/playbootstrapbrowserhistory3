@@ -38,9 +38,9 @@ public class ApplicationTest {
    */
   @Test
   public void renderTemplate() {
-    Content html = views.html.Home.render("Your new application is ready.");
+    Content html = views.html.Home.render();
     assertThat(contentType(html)).isEqualTo("text/html");
-    assertThat(contentAsString(html)).contains("Your new application is ready.");
+    assertThat(contentAsString(html)).contains("<body>");
   }
 
 
@@ -49,7 +49,7 @@ public class ApplicationTest {
    */
   @Test
   public void renderBootstrapTest() {
-    Content html = views.html.Home.render("Your new application is ready.");
+    Content html = views.html.Home.render();
     assertThat(contentAsString(html)).contains("bootstrap.min.css");  // To Do: Make sure the URL targets are good.
     assertThat(contentAsString(html)).contains("jquery.min.js");
     assertThat(contentAsString(html)).contains("bootstrap.min.js");
@@ -61,22 +61,8 @@ public class ApplicationTest {
    */
   @Test
   public void renderGoogleFontsTest() {
-    Content html = views.html.Home.render("Your new application is ready.");
+    Content html = views.html.Home.render();
     assertThat(contentAsString(html)).contains("fonts.googleapis.com");  // To Do: Make sure the URL targets are good.
-  }
-
-
-  /**
-   * Ensure the navigation bar is fully represented.
-   */
-  @Test
-  public void renderNavbarTest() {
-    Content html = views.html.Home.render("Your new application is ready.");
-    assertThat(contentAsString(html)).contains("<a href=\"/\">Home</a>");
-    assertThat(contentAsString(html)).contains("<a href=\"/page1\">Page 1</a>");
-    assertThat(contentAsString(html)).contains("<a href=\"/page2\">Page 2</a>");
-    assertThat(contentAsString(html)).contains("<a href=\"/about\">About</a>");
-    assertThat(contentAsString(html)).contains("<a href=\"/contact\">Contact</a>");
   }
 
 }
