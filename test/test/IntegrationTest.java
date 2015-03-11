@@ -48,4 +48,43 @@ public class IntegrationTest {
     });
   }
 
+  /**
+   * Check if the IE page is shown.
+   */
+  @Test
+  public void testIe() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/ie");
+        assertThat(browser.pageSource()).contains("Internet Explorer");
+      }
+    });
+  }
+
+  /**
+   * Check if the Firefox page is shown.
+   */
+  @Test
+  public void testFirefox() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/firefox");
+        assertThat(browser.pageSource()).contains("Firefox");
+      }
+    });
+  }
+
+  /**
+   * Check if the chrome page is shown.
+   */
+  @Test
+  public void testChrome() {
+    running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+      public void invoke(TestBrowser browser) {
+        browser.goTo("http://localhost:3333/chrome");
+        assertThat(browser.pageSource()).contains("Chrome");
+      }
+    });
+  }
+
 }
