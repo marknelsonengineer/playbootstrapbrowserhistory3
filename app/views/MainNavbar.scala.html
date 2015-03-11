@@ -1,3 +1,5 @@
+@(page: String)
+
 <!-- Responsive navbar -->
 <div class="navbar navbar-fixed-top" role="navigation">
   <div class="container">
@@ -10,10 +12,10 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li> <a href="#intro">Introduction</a></li>
-        <li> <a href="#ie">Internet Explorer</a></li>
-        <li> <a href="#firefox">Firefox</a></li>
-        <li> <a href="#chrome">Chrome</a></li>
+        <li class="@("active".when(page == "Home"))"><a href="@routes.Application.home()">Home</a></li>
+        <li class="@("active".when(page == "Ie"))"><a href="@routes.Application.ie()">Internet Explorer</a></li>
+        <li class="@("active".when(page == "Firefox"))"><a href="@routes.Application.firefox()">Firefox</a></li>
+        <li class="@("active".when(page == "Chrome"))"><a href="@routes.Application.chrome()">Chrome</a></li>
       </ul>
     </div>
   </div>

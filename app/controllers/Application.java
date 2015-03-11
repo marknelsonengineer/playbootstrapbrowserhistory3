@@ -10,7 +10,10 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.Chrome;
+import views.html.Firefox;
 import views.html.Home;
+import views.html.Ie;
 
 
 /**
@@ -26,5 +29,36 @@ public class Application extends Controller {
   public static Result home() {
     return ok(Home.render());
   }
+
+
+  /**
+   * Application IE page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result ie() {
+    return ok(Ie.render());
+  }
+
+
+  /**
+   * Application Firefox page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result firefox() {
+    return ok(Firefox.render());
+  }
+
+
+  /**
+   * Application Chrome page.
+   *
+   * @return HTTP OK with page content.
+   */
+  public static Result chrome() {
+    return ok(Chrome.render());
+  }
+
 
 }
